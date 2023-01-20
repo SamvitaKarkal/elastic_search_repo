@@ -1,0 +1,2150 @@
+Started GET "/notifications/unread_count" for ::1 at 2022-10-27 12:10:12 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/notifications/unread_count"):
+  
+Started GET "/" for ::1 at 2022-10-27 12:10:12 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.8ms | Allocations: 360)
+Completed 200 OK in 16ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 3811)
+
+
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateIdeas (20221027071105)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "ideas" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "picture" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221027071105"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-10-27 07:11:21.938221"], ["updated_at", "2022-10-27 07:11:21.938221"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20221027102142)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime(6), "remember_created_at" datetime(6), "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221027102142"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/sign_up" for ::1 at 2022-10-27 15:53:59 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/shared/_error_messages.html.erb (Duration: 0.9ms | Allocations: 234)
+  Rendered /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 652)
+  Rendered /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/registrations/new.html.erb within layouts/application (Duration: 29.0ms | Allocations: 8693)
+  Rendered layout layouts/application.html.erb (Duration: 287.1ms | Allocations: 107629)
+Completed 200 OK in 336ms (Views: 295.8ms | ActiveRecord: 0.6ms | Allocations: 129729)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-10-27 15:54:03 +0530
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 81)
+  Rendered /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/registrations/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1222)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3822)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 4536)
+
+
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 15:54:38 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started POST "/users" for ::1 at 2022-10-27 15:54:45 +0530
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"samvita@hissa.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "samvita@hissa.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (3.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "samvita@hissa.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2022-10-27 10:24:46.006971"], ["updated_at", "2022-10-27 10:24:46.006971"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to 
+Completed 500 Internal Server Error in 343ms (ActiveRecord: 5.7ms | Allocations: 12359)
+
+
+  
+NoMethodError (undefined method `user_url' for #<Devise::RegistrationsController:0x0000000000d188>):
+  
+actionpack (7.0.4) lib/action_dispatch/routing/polymorphic_routes.rb:231:in `public_send'
+actionpack (7.0.4) lib/action_dispatch/routing/polymorphic_routes.rb:231:in `polymorphic_method'
+actionpack (7.0.4) lib/action_dispatch/routing/polymorphic_routes.rb:116:in `polymorphic_url'
+actionpack (7.0.4) lib/action_dispatch/routing/url_for.rb:187:in `full_url_for'
+actionpack (7.0.4) lib/action_dispatch/routing/url_for.rb:170:in `url_for'
+actionpack (7.0.4) lib/action_controller/metal/redirecting.rb:144:in `_compute_redirect_to_location'
+actionpack (7.0.4) lib/action_controller/metal/redirecting.rb:89:in `redirect_to'
+actionpack (7.0.4) lib/action_controller/metal/flash.rb:62:in `redirect_to'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:42:in `block in redirect_to'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:41:in `redirect_to'
+responders (3.0.1) lib/action_controller/responder.rb:147:in `redirect_to'
+responders (3.0.1) lib/action_controller/responder.rb:207:in `navigation_behavior'
+responders (3.0.1) lib/action_controller/responder.rb:174:in `rescue in to_html'
+responders (3.0.1) lib/action_controller/responder.rb:171:in `to_html'
+responders (3.0.1) lib/action_controller/responder.rb:165:in `respond'
+responders (3.0.1) lib/action_controller/responder.rb:158:in `call'
+responders (3.0.1) lib/action_controller/respond_with.rb:213:in `respond_with'
+devise (4.8.1) app/controllers/devise/registrations_controller.rb:25:in `create'
+actionpack (7.0.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (7.0.4) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/rendering.rb:53:in `process_action'
+actionpack (7.0.4) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.4) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.4) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.4) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.4) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.4) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.4) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.4) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (7.0.4) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/cookies.rb:696:in `call'
+activerecord (7.0.4) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 15:55:41 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 15:56:39 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 15:57:42 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 15:58:46 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 15:59:38 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:00:38 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:01:46 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:02:41 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:03:40 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:04:44 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:16:39 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:17:40 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:18:39 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:19:38 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started GET "/users/sign_up" for ::1 at 2022-10-27 16:20:28 +0530
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/shared/_error_messages.html.erb (Duration: 1.1ms | Allocations: 227)
+  Rendered /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 509)
+  Rendered /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/registrations/new.html.erb within layouts/application (Duration: 6.2ms | Allocations: 2384)
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 6688)
+Completed 200 OK in 25ms (Views: 23.6ms | Allocations: 8181)
+
+
+Started GET "/ideas" for ::1 at 2022-10-27 16:20:31 +0530
+Processing by IdeasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.4ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:6
+  Rendered ideas/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1264)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 3886)
+Completed 200 OK in 12ms (Views: 8.8ms | ActiveRecord: 0.7ms | Allocations: 4975)
+
+
+Started GET "/" for ::1 at 2022-10-27 16:20:33 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.7ms | Allocations: 359)
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 1109)
+
+
+Started GET "/" for ::1 at 2022-10-27 16:20:33 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.9ms | Allocations: 352)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.0ms | Allocations: 1103)
+
+
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:20:39 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started POST "/users" for ::1 at 2022-10-27 16:20:58 +0530
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"est@higg.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "est@higg.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (2.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "est@higg.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2022-10-27 10:50:59.259151"], ["updated_at", "2022-10-27 10:50:59.259151"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to 
+Completed 500 Internal Server Error in 309ms (ActiveRecord: 4.6ms | Allocations: 8016)
+
+
+  
+NoMethodError (undefined method `user_url' for #<Devise::RegistrationsController:0x00000000010108>):
+  
+actionpack (7.0.4) lib/action_dispatch/routing/polymorphic_routes.rb:231:in `public_send'
+actionpack (7.0.4) lib/action_dispatch/routing/polymorphic_routes.rb:231:in `polymorphic_method'
+actionpack (7.0.4) lib/action_dispatch/routing/polymorphic_routes.rb:116:in `polymorphic_url'
+actionpack (7.0.4) lib/action_dispatch/routing/url_for.rb:187:in `full_url_for'
+actionpack (7.0.4) lib/action_dispatch/routing/url_for.rb:170:in `url_for'
+actionpack (7.0.4) lib/action_controller/metal/redirecting.rb:144:in `_compute_redirect_to_location'
+actionpack (7.0.4) lib/action_controller/metal/redirecting.rb:89:in `redirect_to'
+actionpack (7.0.4) lib/action_controller/metal/flash.rb:62:in `redirect_to'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:42:in `block in redirect_to'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:41:in `redirect_to'
+responders (3.0.1) lib/action_controller/responder.rb:147:in `redirect_to'
+responders (3.0.1) lib/action_controller/responder.rb:207:in `navigation_behavior'
+responders (3.0.1) lib/action_controller/responder.rb:174:in `rescue in to_html'
+responders (3.0.1) lib/action_controller/responder.rb:171:in `to_html'
+responders (3.0.1) lib/action_controller/responder.rb:165:in `respond'
+responders (3.0.1) lib/action_controller/responder.rb:158:in `call'
+responders (3.0.1) lib/action_controller/respond_with.rb:213:in `respond_with'
+devise (4.8.1) app/controllers/devise/registrations_controller.rb:25:in `create'
+actionpack (7.0.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (7.0.4) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/rendering.rb:53:in `process_action'
+actionpack (7.0.4) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.4) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.4) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.4) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.4) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.4) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.4) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.4) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (7.0.4) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/cookies.rb:696:in `call'
+activerecord (7.0.4) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:21:38 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:22:41 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:23:46 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:24:39 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:25:43 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:26:39 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:27:41 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:28:39 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:29:47 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:30:40 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:31:42 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:32:40 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:33:41 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:34:41 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:35:47 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:36:39 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:37:43 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:38:40 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:39:39 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:40:40 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:41:47 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:42:38 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:43:44 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:44:40 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:45:43 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:47:03 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:48:08 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:49:04 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:50:08 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:51:05 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:52:04 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:53:06 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:54:12 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:55:03 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:56:07 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:57:03 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:58:03 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 16:59:03 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 17:00:07 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 17:01:07 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 17:02:04 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 17:03:09 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 17:04:06 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 17:05:03 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 17:06:05 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 17:07:07 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 17:09:03 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 17:10:02 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 17:11:06 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 17:12:06 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 17:13:04 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 17:14:04 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 17:15:06 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 17:16:05 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 17:17:09 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 17:18:04 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 17:19:08 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 17:20:02 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 17:27:56 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 17:44:56 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 17:45:58 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 17:46:56 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 17:48:03 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 17:48:56 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 17:49:57 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 17:50:56 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started GET "/users/sign_up" for ::1 at 2022-10-27 17:51:38 +0530
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/shared/_error_messages.html.erb (Duration: 0.9ms | Allocations: 227)
+  Rendered /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 518)
+  Rendered /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/registrations/new.html.erb within layouts/application (Duration: 7.9ms | Allocations: 2402)
+  Rendered layout layouts/application.html.erb (Duration: 31.7ms | Allocations: 16748)
+Completed 200 OK in 45ms (Views: 35.3ms | ActiveRecord: 0.5ms | Allocations: 20202)
+
+
+Started POST "/users" for ::1 at 2022-10-27 17:51:54 +0530
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"hgcg@gvhg.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "hgcg@gvhg.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "hgcg@gvhg.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2022-10-27 12:21:55.280971"], ["updated_at", "2022-10-27 12:21:55.280971"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to 
+Completed 500 Internal Server Error in 313ms (ActiveRecord: 3.3ms | Allocations: 7767)
+
+
+  
+NoMethodError (undefined method `user_url' for #<Devise::RegistrationsController:0x000000000252b0>):
+  
+actionpack (7.0.4) lib/action_dispatch/routing/polymorphic_routes.rb:231:in `public_send'
+actionpack (7.0.4) lib/action_dispatch/routing/polymorphic_routes.rb:231:in `polymorphic_method'
+actionpack (7.0.4) lib/action_dispatch/routing/polymorphic_routes.rb:116:in `polymorphic_url'
+actionpack (7.0.4) lib/action_dispatch/routing/url_for.rb:187:in `full_url_for'
+actionpack (7.0.4) lib/action_dispatch/routing/url_for.rb:170:in `url_for'
+actionpack (7.0.4) lib/action_controller/metal/redirecting.rb:144:in `_compute_redirect_to_location'
+actionpack (7.0.4) lib/action_controller/metal/redirecting.rb:89:in `redirect_to'
+actionpack (7.0.4) lib/action_controller/metal/flash.rb:62:in `redirect_to'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:42:in `block in redirect_to'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:41:in `redirect_to'
+responders (3.0.1) lib/action_controller/responder.rb:147:in `redirect_to'
+responders (3.0.1) lib/action_controller/responder.rb:207:in `navigation_behavior'
+responders (3.0.1) lib/action_controller/responder.rb:174:in `rescue in to_html'
+responders (3.0.1) lib/action_controller/responder.rb:171:in `to_html'
+responders (3.0.1) lib/action_controller/responder.rb:165:in `respond'
+responders (3.0.1) lib/action_controller/responder.rb:158:in `call'
+responders (3.0.1) lib/action_controller/respond_with.rb:213:in `respond_with'
+devise (4.8.1) app/controllers/devise/registrations_controller.rb:25:in `create'
+actionpack (7.0.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (7.0.4) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/rendering.rb:53:in `process_action'
+actionpack (7.0.4) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.4) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.4) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.4) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.4) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.4) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.4) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.4) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (7.0.4) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/cookies.rb:696:in `call'
+activerecord (7.0.4) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 17:51:56 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 17:52:56 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 17:53:58 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 17:55:03 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 17:55:59 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 17:56:58 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 17:57:59 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 17:59:01 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 17:59:57 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 18:01:02 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 18:01:58 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 18:02:56 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 18:03:58 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 18:05:00 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 18:05:59 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 18:07:05 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 18:07:56 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 18:09:00 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 18:09:56 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 18:10:56 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 18:11:56 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 18:12:59 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 18:14:03 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 18:15:20 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 18:44:54 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 18:45:59 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 18:46:56 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 18:47:54 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 18:48:56 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 18:49:54 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 18:51:02 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 18:51:55 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 18:52:58 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 18:53:54 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 18:54:58 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 19:30:26 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 19:31:27 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 19:32:26 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started GET "/users/sign_up" for ::1 at 2022-10-27 19:32:29 +0530
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 81)
+  Rendered /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/registrations/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1222)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 3843)
+Completed 200 OK in 10ms (Views: 8.1ms | Allocations: 4531)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-10-27 19:32:32 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 389)
+  Rendered /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 9.0ms | Allocations: 2512)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 5135)
+Completed 200 OK in 15ms (Views: 14.1ms | Allocations: 6555)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-10-27 19:32:47 +0530
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"test@jghg.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "test@jghg.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 9ms (ActiveRecord: 0.7ms | Allocations: 2089)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-10-27 19:32:50 +0530
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 81)
+  Rendered /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/registrations/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1224)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 3834)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 4535)
+
+
+Started POST "/users" for ::1 at 2022-10-27 19:33:06 +0530
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"test@higg.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@higg.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "test@higg.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2022-10-27 14:03:07.159157"], ["updated_at", "2022-10-27 14:03:07.159157"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to 
+Completed 500 Internal Server Error in 207ms (ActiveRecord: 2.2ms | Allocations: 7407)
+
+
+  
+NoMethodError (undefined method `user_url' for #<Devise::RegistrationsController:0x0000000002c010>):
+  
+actionpack (7.0.4) lib/action_dispatch/routing/polymorphic_routes.rb:231:in `public_send'
+actionpack (7.0.4) lib/action_dispatch/routing/polymorphic_routes.rb:231:in `polymorphic_method'
+actionpack (7.0.4) lib/action_dispatch/routing/polymorphic_routes.rb:116:in `polymorphic_url'
+actionpack (7.0.4) lib/action_dispatch/routing/url_for.rb:187:in `full_url_for'
+actionpack (7.0.4) lib/action_dispatch/routing/url_for.rb:170:in `url_for'
+actionpack (7.0.4) lib/action_controller/metal/redirecting.rb:144:in `_compute_redirect_to_location'
+actionpack (7.0.4) lib/action_controller/metal/redirecting.rb:89:in `redirect_to'
+actionpack (7.0.4) lib/action_controller/metal/flash.rb:62:in `redirect_to'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:42:in `block in redirect_to'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:41:in `redirect_to'
+responders (3.0.1) lib/action_controller/responder.rb:147:in `redirect_to'
+responders (3.0.1) lib/action_controller/responder.rb:207:in `navigation_behavior'
+responders (3.0.1) lib/action_controller/responder.rb:174:in `rescue in to_html'
+responders (3.0.1) lib/action_controller/responder.rb:171:in `to_html'
+responders (3.0.1) lib/action_controller/responder.rb:165:in `respond'
+responders (3.0.1) lib/action_controller/responder.rb:158:in `call'
+responders (3.0.1) lib/action_controller/respond_with.rb:213:in `respond_with'
+devise (4.8.1) app/controllers/devise/registrations_controller.rb:25:in `create'
+actionpack (7.0.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (7.0.4) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/rendering.rb:53:in `process_action'
+actionpack (7.0.4) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.4) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.4) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.4) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.4) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.4) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.4) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.4) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (7.0.4) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/cookies.rb:696:in `call'
+activerecord (7.0.4) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 19:33:26 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 19:34:31 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 19:35:27 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 19:36:30 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 19:37:27 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 19:38:29 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 19:39:28 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 19:40:26 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 19:46:49 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 19:47:49 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 19:48:48 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 19:49:54 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 19:50:49 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 19:51:47 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 19:52:48 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 19:53:52 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 19:54:48 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 19:55:53 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 19:56:49 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 19:57:48 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 19:58:47 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 19:59:48 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 20:00:47 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 22:19:24 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 22:20:33 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 23:43:08 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-27 23:44:08 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-28 00:01:07 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-28 03:15:59 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-28 09:02:31 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-28 09:03:31 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-28 09:04:31 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-28 09:05:31 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-28 09:06:31 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-28 09:07:31 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-28 09:08:31 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-28 09:09:33 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-28 09:10:31 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-28 09:11:33 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-28 09:12:38 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-28 09:13:54 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-28 09:22:32 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-28 09:26:55 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-28 09:27:56 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-28 09:28:58 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-28 10:10:52 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-28 10:19:48 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-28 10:20:54 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-28 10:21:47 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-28 10:22:53 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-28 10:23:49 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-28 10:46:16 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-28 11:48:12 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-28 12:38:06 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-28 12:39:02 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-28 12:40:02 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started OPTIONS "/notifications/unread_count" for ::1 at 2022-10-28 12:41:02 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/notifications/unread_count"):
+  
+Started GET "/" for ::1 at 2022-11-16 18:10:44 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.4ms | Allocations: 565)
+Completed 200 OK in 13ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 5288)
+
+
+Started GET "/" for ::1 at 2022-11-16 18:21:48 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.6ms | Allocations: 353)
+Completed 200 OK in 2ms (Views: 1.4ms | Allocations: 1110)
+
+
+Started GET "/users/signup" for ::1 at 2022-11-16 18:23:20 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/users/signup"):
+  
+Started GET "/users/sign_up" for ::1 at 2022-11-16 18:23:33 +0530
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/shared/_error_messages.html.erb (Duration: 0.8ms | Allocations: 233)
+  Rendered /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (Duration: 2.0ms | Allocations: 647)
+  Rendered /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/registrations/new.html.erb within layouts/application (Duration: 22.4ms | Allocations: 6061)
+  Rendered layout layouts/application.html.erb (Duration: 96.1ms | Allocations: 46151)
+Completed 200 OK in 113ms (Views: 98.5ms | ActiveRecord: 0.6ms | Allocations: 64391)
+
+
+Started POST "/users" for ::1 at 2022-11-16 18:25:59 +0530
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"higgs@higgs.care", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "higgs@higgs.care"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "higgs@higgs.care"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2022-11-16 12:55:59.945450"], ["updated_at", "2022-11-16 12:55:59.945450"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to 
+Completed 500 Internal Server Error in 246ms (ActiveRecord: 3.5ms | Allocations: 11682)
+
+
+  
+NoMethodError (undefined method `user_url' for #<Devise::RegistrationsController:0x0000000000d610>
+Did you mean?  users_url):
+  
+actionpack (7.0.4) lib/action_dispatch/routing/polymorphic_routes.rb:231:in `public_send'
+actionpack (7.0.4) lib/action_dispatch/routing/polymorphic_routes.rb:231:in `polymorphic_method'
+actionpack (7.0.4) lib/action_dispatch/routing/polymorphic_routes.rb:116:in `polymorphic_url'
+actionpack (7.0.4) lib/action_dispatch/routing/url_for.rb:187:in `full_url_for'
+actionpack (7.0.4) lib/action_dispatch/routing/url_for.rb:170:in `url_for'
+actionpack (7.0.4) lib/action_controller/metal/redirecting.rb:144:in `_compute_redirect_to_location'
+actionpack (7.0.4) lib/action_controller/metal/redirecting.rb:89:in `redirect_to'
+actionpack (7.0.4) lib/action_controller/metal/flash.rb:62:in `redirect_to'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:42:in `block in redirect_to'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:41:in `redirect_to'
+responders (3.0.1) lib/action_controller/responder.rb:147:in `redirect_to'
+responders (3.0.1) lib/action_controller/responder.rb:207:in `navigation_behavior'
+responders (3.0.1) lib/action_controller/responder.rb:174:in `rescue in to_html'
+responders (3.0.1) lib/action_controller/responder.rb:171:in `to_html'
+responders (3.0.1) lib/action_controller/responder.rb:165:in `respond'
+responders (3.0.1) lib/action_controller/responder.rb:158:in `call'
+responders (3.0.1) lib/action_controller/respond_with.rb:213:in `respond_with'
+devise (4.8.1) app/controllers/devise/registrations_controller.rb:25:in `create'
+actionpack (7.0.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (7.0.4) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/rendering.rb:53:in `process_action'
+actionpack (7.0.4) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.4) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.4) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.4) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.4) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.4) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.4) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.4) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (7.0.4) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/cookies.rb:696:in `call'
+activerecord (7.0.4) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/users/sign_up" for ::1 at 2022-11-16 18:40:25 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/shared/_error_messages.html.erb (Duration: 0.7ms | Allocations: 234)
+  Rendered /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (Duration: 1.4ms | Allocations: 652)
+  Rendered /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/registrations/new.html.erb within layouts/application (Duration: 14.8ms | Allocations: 6325)
+  Rendered layout layouts/application.html.erb (Duration: 59.2ms | Allocations: 42014)
+Completed 200 OK in 92ms (Views: 71.0ms | ActiveRecord: 0.5ms | Allocations: 64229)
+
+
+Started POST "/users" for ::1 at 2022-11-16 18:40:40 +0530
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"test@higgs.care", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@higgs.care"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "test@higgs.care"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2022-11-16 13:10:40.273643"], ["updated_at", "2022-11-16 13:10:40.273643"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to 
+Completed 500 Internal Server Error in 220ms (ActiveRecord: 3.1ms | Allocations: 12407)
+
+
+  
+NoMethodError (undefined method `user_url' for #<Devise::RegistrationsController:0x0000000000d020>
+Did you mean?  users_url):
+  
+actionpack (7.0.4) lib/action_dispatch/routing/polymorphic_routes.rb:231:in `public_send'
+actionpack (7.0.4) lib/action_dispatch/routing/polymorphic_routes.rb:231:in `polymorphic_method'
+actionpack (7.0.4) lib/action_dispatch/routing/polymorphic_routes.rb:116:in `polymorphic_url'
+actionpack (7.0.4) lib/action_dispatch/routing/url_for.rb:187:in `full_url_for'
+actionpack (7.0.4) lib/action_dispatch/routing/url_for.rb:170:in `url_for'
+actionpack (7.0.4) lib/action_controller/metal/redirecting.rb:144:in `_compute_redirect_to_location'
+actionpack (7.0.4) lib/action_controller/metal/redirecting.rb:89:in `redirect_to'
+actionpack (7.0.4) lib/action_controller/metal/flash.rb:62:in `redirect_to'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:42:in `block in redirect_to'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:41:in `redirect_to'
+responders (3.0.1) lib/action_controller/responder.rb:147:in `redirect_to'
+responders (3.0.1) lib/action_controller/responder.rb:207:in `navigation_behavior'
+responders (3.0.1) lib/action_controller/responder.rb:174:in `rescue in to_html'
+responders (3.0.1) lib/action_controller/responder.rb:171:in `to_html'
+responders (3.0.1) lib/action_controller/responder.rb:165:in `respond'
+responders (3.0.1) lib/action_controller/responder.rb:158:in `call'
+responders (3.0.1) lib/action_controller/respond_with.rb:213:in `respond_with'
+devise (4.8.1) app/controllers/devise/registrations_controller.rb:25:in `create'
+actionpack (7.0.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (7.0.4) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/rendering.rb:53:in `process_action'
+actionpack (7.0.4) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.4) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.4) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.4) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.4) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.4) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.4) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.4) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (7.0.4) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/cookies.rb:696:in `call'
+activerecord (7.0.4) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for ::1 at 2022-11-16 19:11:05 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20221116133503_add_devise_to_users.rb
+
+
+):
+  
+activerecord (7.0.4) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.4) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.4) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.4) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for ::1 at 2022-11-16 19:11:29 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+AbstractController::ActionNotFound (The action 'home' could not be found for IdeasController):
+  
+actionpack (7.0.4) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/cookies.rb:696:in `call'
+activerecord (7.0.4) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for ::1 at 2022-11-16 19:11:56 +0530
+Processing by IdeasController#index as HTML
+Completed 401 Unauthorized in 17ms (Allocations: 5810)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-11-16 19:11:57 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (Duration: 1.9ms | Allocations: 828)
+  Rendered /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 12.5ms | Allocations: 3696)
+  Rendered layout layouts/application.html.erb (Duration: 73.9ms | Allocations: 39522)
+Completed 200 OK in 97ms (Views: 77.4ms | ActiveRecord: 1.0ms | Allocations: 58300)
+
+
+Started GET "/" for ::1 at 2022-11-16 19:12:15 +0530
+Processing by IdeasController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 464)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-11-16 19:12:15 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 135)
+  Rendered /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1248)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 3960)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 4749)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-11-16 19:12:29 +0530
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/shared/_error_messages.html.erb (Duration: 0.8ms | Allocations: 232)
+  Rendered /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 210)
+  Rendered /Users/samvitakarkal/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views/devise/registrations/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 2176)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 4911)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 6271)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-11-16 19:50:51 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.9ms | Allocations: 234)
+  Rendered devise/shared/_links.html.erb (Duration: 2.3ms | Allocations: 652)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 30.1ms | Allocations: 6317)
+  Rendered layout layouts/application.html.erb (Duration: 107.0ms | Allocations: 41969)
+Completed 200 OK in 146ms (Views: 116.8ms | ActiveRecord: 0.8ms | Allocations: 64134)
+
+
+Started POST "/users" for ::1 at 2022-11-16 19:51:12 +0530
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"test@higgs.care", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@higgs.care"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.0ms | Allocations: 582)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 81)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2438)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 5159)
+Completed 200 OK in 364ms (Views: 8.6ms | ActiveRecord: 1.2ms | Allocations: 13737)
+
+
+Started POST "/users" for ::1 at 2022-11-16 19:51:29 +0530
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"test2@higgs.care", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test2@higgs.care"], ["LIMIT", 1]]
+  [1m[36mUser Create (5.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "test2@higgs.care"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2022-11-16 14:21:29.449728"], ["updated_at", "2022-11-16 14:21:29.449728"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 310ms (ActiveRecord: 6.9ms | Allocations: 6139)
+
+
+Started GET "/" for ::1 at 2022-11-16 19:51:29 +0530
+Processing by IdeasController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.5ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:6
+  Rendered ideas/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 811)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 3549)
+Completed 200 OK in 15ms (Views: 8.5ms | ActiveRecord: 0.7ms | Allocations: 6211)
+
+
+Started GET "/ideas/new" for ::1 at 2022-11-16 19:51:40 +0530
+Processing by IdeasController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/_form.html.erb (Duration: 5.7ms | Allocations: 1818)
+  Rendered ideas/new.html.erb within layouts/application (Duration: 7.2ms | Allocations: 2105)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 4837)
+Completed 200 OK in 26ms (Views: 11.5ms | ActiveRecord: 0.6ms | Allocations: 20394)
+
+
+Started POST "/ideas" for ::1 at 2022-11-16 19:51:48 +0530
+Processing by IdeasController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "idea"=>{"name"=>"Name", "description"=>"gyhg", "picture"=>""}, "commit"=>"Create Idea"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ideas_controller.rb:27:in `block in create'
+  [1m[36mIdea Create (0.4ms)[0m  [1m[32mINSERT INTO "ideas" ("name", "description", "picture", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Name"], ["description", "gyhg"], ["picture", ""], ["created_at", "2022-11-16 14:21:48.387239"], ["updated_at", "2022-11-16 14:21:48.387239"]]
+  ↳ app/controllers/ideas_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/ideas_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/ideas/1
+Completed 302 Found in 20ms (ActiveRecord: 1.4ms | Allocations: 3244)
+
+
+Started GET "/ideas/1" for ::1 at 2022-11-16 19:51:48 +0530
+Processing by IdeasController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:63:in `set_idea'
+  Rendering layout layouts/application.html.erb
+  Rendering ideas/show.html.erb within layouts/application
+  Rendered ideas/_idea.html.erb (Duration: 0.7ms | Allocations: 219)
+  Rendered ideas/show.html.erb within layouts/application (Duration: 23.5ms | Allocations: 3393)
+  Rendered layout layouts/application.html.erb (Duration: 27.3ms | Allocations: 6136)
+Completed 200 OK in 37ms (Views: 27.8ms | ActiveRecord: 0.3ms | Allocations: 8885)
+
+
+Started DELETE "/ideas/1" for ::1 at 2022-11-16 19:51:54 +0530
+Processing by IdeasController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:63:in `set_idea'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ideas_controller.rb:52:in `destroy'
+  [1m[36mIdea Destroy (0.7ms)[0m  [1m[31mDELETE FROM "ideas" WHERE "ideas"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/ideas_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/ideas_controller.rb:52:in `destroy'
+Redirected to http://localhost:3000/ideas
+Completed 302 Found in 8ms (ActiveRecord: 1.8ms | Allocations: 3378)
+
+
+Started GET "/ideas" for ::1 at 2022-11-16 19:51:54 +0530
+Processing by IdeasController#index as TURBO_STREAM
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:6
+  Rendered ideas/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 541)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 3272)
+Completed 200 OK in 8ms (Views: 5.0ms | ActiveRecord: 0.2ms | Allocations: 4845)
+
+
+Started GET "/users/sign_out" for ::1 at 2022-11-16 19:51:56 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/users/sign_out" for ::1 at 2022-11-16 19:55:05 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/ideas" for ::1 at 2022-11-16 19:55:08 +0530
+Processing by IdeasController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:6
+  Rendered ideas/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 765)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 3965)
+Completed 200 OK in 13ms (Views: 9.9ms | ActiveRecord: 0.2ms | Allocations: 6185)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-11-16 19:55:11 +0530
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 0.1ms | Allocations: 2569)
+
+
+Started GET "/" for ::1 at 2022-11-16 19:55:11 +0530
+Processing by IdeasController#index as TURBO_STREAM
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 438)
+
+
+Started GET "/users/sign_in.turbo_stream" for ::1 at 2022-11-16 19:55:11 +0530
+Processing by Devise::SessionsController#new as TURBO_STREAM
+Completed 406 Not Acceptable in 2ms (ActiveRecord: 0.0ms | Allocations: 970)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+responders (3.0.1) lib/action_controller/respond_with.rb:215:in `respond_with'
+devise (4.8.1) app/controllers/devise/sessions_controller.rb:14:in `new'
+actionpack (7.0.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (7.0.4) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/rendering.rb:53:in `process_action'
+actionpack (7.0.4) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.4) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.4) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.4) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.4) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.4) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.4) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.4) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (7.0.4) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/cookies.rb:696:in `call'
+activerecord (7.0.4) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/ideas" for ::1 at 2022-11-16 19:55:11 +0530
+Processing by IdeasController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 448)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-11-16 19:55:11 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.1ms | Allocations: 817)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 8.3ms | Allocations: 2829)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 5580)
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.0ms | Allocations: 6930)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-11-16 19:55:26 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"test@higgs.care", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "test@higgs.care"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/ideas
+Completed 302 Found in 301ms (ActiveRecord: 0.2ms | Allocations: 2799)
+
+
+Started GET "/ideas" for ::1 at 2022-11-16 19:55:26 +0530
+Processing by IdeasController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:6
+  Rendered ideas/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 544)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 3272)
+Completed 200 OK in 8ms (Views: 5.2ms | ActiveRecord: 0.2ms | Allocations: 4832)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-11-16 19:55:28 +0530
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms | Allocations: 1780)
+
+
+Started GET "/" for ::1 at 2022-11-16 19:55:29 +0530
+Processing by IdeasController#index as TURBO_STREAM
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 444)
+
+
+Started GET "/users/sign_in.turbo_stream" for ::1 at 2022-11-16 19:55:29 +0530
+Processing by Devise::SessionsController#new as TURBO_STREAM
+Completed 406 Not Acceptable in 1ms (ActiveRecord: 0.0ms | Allocations: 968)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+responders (3.0.1) lib/action_controller/respond_with.rb:215:in `respond_with'
+devise (4.8.1) app/controllers/devise/sessions_controller.rb:14:in `new'
+actionpack (7.0.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (7.0.4) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/rendering.rb:53:in `process_action'
+actionpack (7.0.4) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.4) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.4) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.4) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.4) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.4) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.4) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.4) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (7.0.4) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/cookies.rb:696:in `call'
+activerecord (7.0.4) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/ideas" for ::1 at 2022-11-16 19:55:29 +0530
+Processing by IdeasController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 446)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-11-16 19:55:29 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 135)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1275)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 4011)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 4793)
+
+
